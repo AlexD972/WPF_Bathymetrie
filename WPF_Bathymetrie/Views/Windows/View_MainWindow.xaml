@@ -54,7 +54,7 @@
                         <local:NavButton NavText="Données à l'instant T" NavLink="Views/Pages/View_DataT_Page.xaml" x:Name="DataT" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
                         <local:NavButton NavText="Données aux 0 des cartes" NavLink="Views/Pages/View_Data0_Page.xaml" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
                         <local:NavButton NavText="Prévision marée" NavLink="Views/Pages/View_Prevision_Page.xaml" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
-                        <local:NavButton NavText="Profil des engins sur les jalons" NavLink="Views/Pages/View_Profil_Engin_Page.xaml" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
+                        <local:NavButton NavText="Profil des bateaux sur les jalons" NavLink="Views/Pages/View_Profil_Bateaux_Page.xaml" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
                         <local:NavButton NavText="Vue de dessus" NavLink="Views/Pages/View_Graphiques_Page.xaml" HorizontalAlignment="Stretch"/>
                     </ListBox>
                 </Viewbox>

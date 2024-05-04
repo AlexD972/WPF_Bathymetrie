@@ -65,7 +65,7 @@ namespace WPF_Bathymetrie.Views.Pages
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Erreur lors de l'enregistrement du fichier, vérifiez vos valeurs. ", "Avertissement : FLOPHIB", MessageBoxButton.OK, MessageBoxImage.Error);
+				MessageBox.Show("Erreur lors de l'enregistrement du fichier, vérifiez vos valeurs. ", "Avertissement : Bathymetrie", MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 			
 		}

@@ -52,7 +52,7 @@ namespace WPF_Bathymetrie.ViewModels
 		public SeriesCollection SeriesCollection { get; set; }
 		#endregion
 
-		#region Partie Profil Engins SerieCollection2 et Formatter
+		#region Partie Profil Bateau SerieCollection2 et Formatter
 		public Func<double, string> Formatter2 { get; set; }
 		public SeriesCollection SeriesCollection2 { get; set; }
 		#endregion
@@ -79,7 +79,7 @@ namespace WPF_Bathymetrie.ViewModels
 		public ICommand ButtonJalon10 { get; set; }
 		#endregion
 
-		#region ICommand ButtonSegment Profil Engin
+		#region ICommand ButtonSegment Profil Bateau
 		public ICommand ButtonS1 { get; set; }
 		public ICommand ButtonS2 { get; set; }
 		public ICommand ButtonS3 { get; set; }
@@ -143,7 +143,7 @@ namespace WPF_Bathymetrie.ViewModels
 			ButtonJalon10 = new RelayCommand(o => Button_Jalon10_Click("Button_Jalon10"));
 			#endregion
 
-			#region RelayCommand Profil Engin ButtonSegment 
+			#region RelayCommand Profil Bateau ButtonSegment 
 			ButtonS1 = new RelayCommand(o => Button_S1_Click("Button_S1"));
 			ButtonS2 = new RelayCommand(o => Button_S2_Click("Button_S2"));
 			ButtonS3 = new RelayCommand(o => Button_S3_Click("Button_S3"));
@@ -255,29 +255,6 @@ namespace WPF_Bathymetrie.ViewModels
 					Values = new ChartValues<double>(Collection_DataGrid_0.Select(item => 0.0)),
 					Stroke = new SolidColorBrush(Color.FromRgb(122, 37, 16)),
 					Fill = new SolidColorBrush(Color.FromRgb(122, 37, 16)),
-				},
-				new LineSeries
-				{
-					Title = "-1.2m",
-					Values = new ChartValues<double>(Collection_DataGrid_0.Select(item => -1.2)),
-					Stroke = new SolidColorBrush(Color.FromRgb(255, 0, 0)),
-					Fill = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)),
-					PointForeground = new SolidColorBrush(Color.FromRgb(255, 0, 0)),
-					StrokeDashArray = new DoubleCollection(new double[] { 2 }),
-					PointGeometry = null,
-					PointGeometrySize = 0
-
-				},
-				new LineSeries
-				{
-					Title = "-1.6m",
-					Values = new ChartValues<double>(Collection_DataGrid_0.Select(item => -1.6)),
-					Stroke = new SolidColorBrush(Color.FromRgb(255, 0, 0)),
-					Fill = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)),
-					PointForeground = new SolidColorBrush(Color.FromRgb(255, 0, 0)),
-					StrokeDashArray = new DoubleCollection(new double[] { 2 }),
-					PointGeometry = null,
-					PointGeometrySize = 0
 				}
 			};
 			#endregion
@@ -356,7 +333,7 @@ namespace WPF_Bathymetrie.ViewModels
 						}
 						if (rowCount != 21)
 						{
-							MessageBox.Show("Erreur : Le fichier CSV n'est pas au bon format de données.", "Avertissement : FLOPHIB", MessageBoxButton.OK, MessageBoxImage.Error);
+							MessageBox.Show("Erreur : Le fichier CSV n'est pas au bon format de données.", "Avertissement : Bathymetrie", MessageBoxButton.OK, MessageBoxImage.Error);
 							Reinitialisation_des_Donnees_du_Releve_T();
 						}
 					}
@@ -364,11 +341,11 @@ namespace WPF_Bathymetrie.ViewModels
 				}
 				catch (IOException)
 				{
-					MessageBox.Show("Le fichier est déjà ouvert. Veuillez le fermer et réessayer.", "Avertissement : FLOPHIB", MessageBoxButton.OK, MessageBoxImage.Error);
+					MessageBox.Show("Le fichier est déjà ouvert. Veuillez le fermer et réessayer.", "Avertissement : Bathymetrie", MessageBoxButton.OK, MessageBoxImage.Error);
 				}
 				catch (Exception)
 				{
-					MessageBox.Show("Une erreur s'est produite lors de la lecture du fichier CSV. Veuillez vérifier que les données sont correctes.", "Avertissement : FLOPHIB", MessageBoxButton.OK, MessageBoxImage.Error);
+					MessageBox.Show("Une erreur s'est produite lors de la lecture du fichier CSV. Veuillez vérifier que les données sont correctes.", "Avertissement : Bathymetrie", MessageBoxButton.OK, MessageBoxImage.Error);
 					Reinitialisation_des_Donnees_du_Releve_T();
 				}
 			}
@@ -845,7 +822,7 @@ namespace WPF_Bathymetrie.ViewModels
 
 
 		#endregion
-		#region Gestion des boutons de la page Profil des Engins
+		#region Gestion des boutons de la page Profil des Bateaux
 		//Utiliser cette ligne pour les valeurs
 		//jalonData = Collection_DataGrid_0.Skip(14).Take(6).Select(item => item.Propriete1).ToList();
 		public void Button_S1_Click(object sender)

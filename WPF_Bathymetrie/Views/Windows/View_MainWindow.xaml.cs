@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using WPF_Bathymetrie.Styles;
 
 namespace WPF_Bathymetrie.Views.Windows
@@ -29,7 +21,7 @@ namespace WPF_Bathymetrie.Views.Windows
 		protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
 		{
 			MessageBoxResult result = MessageBox.Show(
-				"Voulez-vous vraiment quitter ?", "Avertissement : FLOPHIB",
+				"Voulez-vous vraiment quitter ?", "Avertissement : Bathymetrie",
 				MessageBoxButton.OKCancel);
 			if (result == MessageBoxResult.Cancel)
 			{

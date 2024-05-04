@@ -22,7 +22,7 @@
 
         <!--Titre Relevé à l'instant T-->
         <Viewbox Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox BorderThickness="0" Background="Transparent" IsReadOnly="True" Foreground="White" IsHitTestVisible="False" Text="Relevé à l'instant T" FontFamily="/Style/Font/#Poppins"/>
+            <TextBox BorderThickness="0" Background="Transparent" IsReadOnly="True" Foreground="White" IsHitTestVisible="False" Text="Relevé à l'instant T" FontFamily="/Styles/Font/#Poppins"/>
         </Viewbox>
 
         <!--Message attention-->
@@ -47,7 +47,7 @@
                 </Button.Template>
             </Button>
             <Viewbox Grid.Column="0">
-                <TextBlock IsHitTestVisible="False" TextWrapping="Wrap" Foreground="White" Margin="8 8 8 8" Background="Transparent" FontFamily="/Style/Font/#Poppins" TextAlignment="Center">
+                <TextBlock IsHitTestVisible="False" TextWrapping="Wrap" Foreground="White" Margin="8 8 8 8" Background="Transparent" FontFamily="/Styles/Font/#Poppins" TextAlignment="Center">
                     Importer les données
                 </TextBlock>
             </Viewbox>
@@ -61,7 +61,7 @@
                 </Button.Template>
             </Button>
             <Viewbox Grid.Column="2">
-                <TextBlock IsHitTestVisible="False" TextWrapping="Wrap" Foreground="White" Margin="8 8 8 8" Background="Transparent" FontFamily="/Style/Font/#Poppins" TextAlignment="Center">
+                <TextBlock IsHitTestVisible="False" TextWrapping="Wrap" Foreground="White" Margin="8 8 8 8" Background="Transparent" FontFamily="/Styles/Font/#Poppins" TextAlignment="Center">
                     Exporter
                 </TextBlock>
             </Viewbox>
