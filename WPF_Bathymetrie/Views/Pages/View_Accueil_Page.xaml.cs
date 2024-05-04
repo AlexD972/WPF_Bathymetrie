@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,21 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_Bathymetrie.Views.Windows;
 
-namespace WPF_Bathymetrie
+namespace WPF_Bathymetrie.Views.Pages
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Logique d'interaction pour View_Accueil_Page.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class View_Accueil_Page : Page
 	{
-		public MainWindow()
+		public View_Accueil_Page()
 		{
 			InitializeComponent();
-			this.Hide();
-			View_MainWindow view_MainWindow = new View_MainWindow();
-			view_MainWindow.Show();
 		}
 	}
 }

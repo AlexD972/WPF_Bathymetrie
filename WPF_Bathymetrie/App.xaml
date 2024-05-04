@@ -1,9 +1,9 @@
 ﻿<Application x:Class="WPF_Bathymetrie.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WPF_Bathymetrie"
+             xmlns:local="clr-namespace:WPF_Bathymetrie.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <local:ViewModel_Data x:Key="ViewModel_Data"/>
     </Application.Resources>
 </Application>

@@ -1,0 +1,126 @@
+﻿<Page x:Class="WPF_Bathymetrie.Views.Pages.View_Accueil_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_Bathymetrie.Views.Pages"
+      mc:Ignorable="d" 
+      d:DataContext="{StaticResource ViewModel_Data}"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="View_Accueil_Page">
+    <Page.DataContext>
+        <StaticResource ResourceKey="ViewModel_Data"/>
+    </Page.DataContext>
+
+    <Grid Background="#28293D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Titre À propos Ligne 0-->
+        <Viewbox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox BorderThickness="0" Background="Transparent" IsReadOnly="True" Foreground="White" IsHitTestVisible="False" Text="Accueil" FontFamily="/Styles/Font/#Poppins"/>
+        </Viewbox>
+
+        <!--<Image Source="/Images/Logo.png" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="3"/>-->
+        <!--Texte Ligne 1-->
+        <Viewbox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ListBox Background="Transparent" IsHitTestVisible="False" BorderBrush="Transparent">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border Background="Transparent">
+                                        <ContentPresenter />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <TextBlock Foreground="White" IsHitTestVisible="False" Text="WPF_Bathymétrie est un logiciel permettant la visualisation de données bathymétriques d'une plage." HorizontalAlignment="Left"/>
+            </ListBox>
+        </Viewbox>
+
+        <!--Texte Ligne 2-->
+        <Viewbox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <ListBox Background="Transparent" IsHitTestVisible="False" BorderBrush="Transparent">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border Background="Transparent">
+                                        <ContentPresenter />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <TextBlock Foreground="White"><Underline>Point important :</Underline> Les fichiers CSV de données doivent suivre le modèle fournit avec le logiciel.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Explications :</Underline><LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Données à l'instant T :</Underline> Cet onglet permet de rentrer à la main des données bathymétriques de la plage.<LineBreak/>Il est possible d'importer des données au format CSV. Puis de les exporter aussi au format CSV.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Données au 0 des cartes :</Underline> Le 0 des cartes correspond à la hauteur d'eau à la marée la plus basse<LineBreak/>théoriquement atteignable. Ces données sont celles utilisées dans les autres onglets.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Prévision marée :</Underline> Cet onglet permet de calculer la hauteur d'eau en fonction de la marée future.<LineBreak/>Avec visualisation des normes de sécurité pour les différents engins.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Profil des engins sur les jalons :</Underline> Cet onglet permet de visualiser des bateaux sur le profil de chaque jalon à l'échelle.<LineBreak/>Ainsi que de régler les bornes des jalons pour avoir une visualisation plus précise d'une certaine zone.<LineBreak/>
+               Un engin neutre peut être adapté en longueur et en hauteur afin de le visualiser sur les profils.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Vue de dessus :</Underline> Cet onglet permet de visualiser la plage en vue de dessus.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Capture d'écran :</Underline> Il est possible à tout moment de réaliser une capture d'écran du logiciel.<LineBreak/>
+            La définition de la capture d'écran sera moins bonne si vous utilisez un 2ème écran.</TextBlock>
+
+            </ListBox>
+        </Viewbox>
+
+        <!--Explications Ligne 3-->
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ListBox Background="Transparent" IsHitTestVisible="False" BorderBrush="Transparent">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border Background="Transparent">
+                                        <ContentPresenter />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+        </Viewbox>
+        <!--Contacts Ligne 5-->
+        <Viewbox Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <ListBox Background="Transparent" BorderBrush="Transparent" Margin="0 15 0 5">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border Background="Transparent">
+                                        <ContentPresenter />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <TextBox BorderThickness="0" Background="Transparent" IsReadOnly="True" Foreground="White" IsHitTestVisible="False" Text="Logiciel réalisé par Alexandre DUCLOS."/>
+                <TextBox BorderThickness="0" Background="Transparent" IsReadOnly="True" Foreground="White" Text="Pour me contacter : https://github.com/AlexD972"/>
+
+            </ListBox>
+        </Viewbox>
+
+    </Grid>
+</Page>

@@ -1,0 +1,84 @@
+﻿<Window x:Class="WPF_Bathymetrie.Views.Windows.View_MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Bathymetrie.Styles"
+        mc:Ignorable="d"
+        Title="Logiciel Bathymétrie" WindowState="Maximized" Background="#1C2734">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Column="0" VerticalAlignment="Top">
+            <ListBox BorderBrush="Transparent" Background="#1C2734" Margin="5 0 5 5">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border Background="Transparent">
+                                        <ContentPresenter />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <Viewbox Margin="0 15 0 15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Canvas Grid.Column="1" Grid.Row="1" Width="50" Height="50">
+                            <Ellipse Width="50" Height="50" Fill="#FFFFFF" IsHitTestVisible="False"/>
+                        </Canvas>
+                        <!--<Image Source="/Images/Logo_FLOPHIB.png" Width="50" Height="50" Grid.Column="1" Grid.Row="1"/>-->
+                        <TextBox Text="FLOPHIB" IsReadOnly="True" Background="Transparent" FontFamily="/Styles/Font/#Poppins" Grid.Column="1" Grid.Row="0" IsHitTestVisible="False" Foreground="White" BorderThickness="0" BorderBrush="Transparent"/>
+
+                    </Grid>
+                </Viewbox>
+                <Viewbox>
+                    <ListBox BorderBrush="Transparent" Background="#1C2734" x:Name="SideMenu" SelectionChanged="SideMenu_SelectionChanged" Margin="5 5 5 5" KeyDown="SideMenu_KeyDown">
+                        <local:NavButton NavText="Accueil" NavLink="Views/Pages/View_Accueil_Page.xaml" x:Name="Accueil" HorizontalAlignment="Stretch"/>
+                        <local:NavButton NavText="À propos" NavLink="Views/Pages/View_Accueil_Page.xaml" HorizontalAlignment="Stretch" Visibility="Hidden" IsHitTestVisible="False"/>
+                        <local:NavButton NavText="Données à l'instant T" NavLink="Views/Pages/View_DataT_Page.xaml" x:Name="DataT" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
+                        <local:NavButton NavText="Données aux 0 des cartes" NavLink="Views/Pages/View_Data0_Page.xaml" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
+                        <local:NavButton NavText="Prévision marée" NavLink="Views/Pages/View_Prevision_Page.xaml" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
+                        <local:NavButton NavText="Profil des engins sur les jalons" NavLink="Views/Pages/View_Profil_Engin_Page.xaml" HorizontalAlignment="Stretch" Margin="0,0,0,10"/>
+                        <local:NavButton NavText="Vue de dessus" NavLink="Views/Pages/View_Graphiques_Page.xaml" HorizontalAlignment="Stretch"/>
+                    </ListBox>
+                </Viewbox>
+            </ListBox>
+        </Viewbox>
+
+
+
+        <Viewbox VerticalAlignment="Bottom">
+            <Grid>
+                <Button Margin="2 2 2 2" Click="Button_Capture_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#3271FF" CornerRadius="3"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Viewbox>
+                    <TextBlock IsHitTestVisible="False" TextWrapping="Wrap" Foreground="White" Margin="8 8 8 8" Background="Transparent" TextAlignment="Center" FontFamily="/Styles/Font/#Poppins">
+                    Capture d'écran
+                    </TextBlock>
+                </Viewbox>
+            </Grid>
+        </Viewbox>
+        <Frame Grid.Column="1" x:Name="navFrame" BorderBrush="#2D3B4E" Source="/Views/Pages/View_DataT_Page.xaml" Background="White"  NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>
