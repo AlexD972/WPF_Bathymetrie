@@ -67,11 +67,11 @@
                         </Setter>
                     </Style>
                 </ListBox.ItemContainerStyle>
-                <TextBlock Foreground="White"><Underline>Point important :</Underline> Les fichiers CSV de données doivent suivre le modèle fournit avec le logiciel.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Point important :</Underline> Les fichiers CSV de données doivent suivre le modèle fourni avec le logiciel.<LineBreak/></TextBlock>
                 <TextBlock Foreground="White"><Underline>Explications :</Underline><LineBreak/></TextBlock>
                 <TextBlock Foreground="White"><Underline>Données à l'instant T :</Underline> Cet onglet permet de rentrer à la main des données bathymétriques.<LineBreak/>Il est possible d'importer des données au format CSV. Puis de les exporter aussi au format CSV.<LineBreak/></TextBlock>
                 <TextBlock Foreground="White"><Underline>Données au 0 des cartes :</Underline> Le 0 des cartes correspond à la hauteur d'eau à la marée la plus basse<LineBreak/>théoriquement atteignable. Ces données sont celles utilisées dans les autres onglets.<LineBreak/></TextBlock>
-                <TextBlock Foreground="White"><Underline>Prévision marée :</Underline> Cet onglet permet de calculer la hauteur d'eau en fonction de la marée future.<LineBreak/>Avec visualisation des normes de sécurité pour les différents engins.<LineBreak/></TextBlock>
+                <TextBlock Foreground="White"><Underline>Prévision marée :</Underline> Cet onglet permet de calculer la hauteur d'eau en fonction de la marée future.<LineBreak/>Avec visualisation des normes de sécurité pour les différents bateaux.<LineBreak/></TextBlock>
                 <TextBlock Foreground="White"><Underline>Profil des bateaux sur les jalons :</Underline> Cet onglet permet de visualiser des bateaux sur le profil de chaque jalon à l'échelle.<LineBreak/>Ainsi que de régler les bornes des jalons pour avoir une visualisation plus précise d'une certaine zone.<LineBreak/>
                Un bateau neutre peut être adapté en longueur et en hauteur afin de le visualiser sur les profils.<LineBreak/></TextBlock>
                 <TextBlock Foreground="White"><Underline>Vue de dessus :</Underline> Cet onglet permet de visualiser la bathymétrie en vue de dessus.<LineBreak/></TextBlock>

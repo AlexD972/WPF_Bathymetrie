@@ -1,0 +1,81 @@
+﻿<Page x:Class="WPF_Bathymetrie.Views.Pages.View_Graphiques_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_Bathymetrie.Views.Pages"
+      xmlns:lc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d"
+      d:DataContext="{StaticResource ViewModel_Data}"
+      Title="View_Graphiques_Page">
+    <Page.DataContext>
+        <StaticResource ResourceKey="ViewModel_Data"/>
+    </Page.DataContext>
+
+    <Grid  Background="#28293D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="70*"/>
+        </Grid.RowDefinitions>
+
+        <!--Titre Graphique Dessus-->
+        <Viewbox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox BorderThickness="0" Background="Transparent" IsHitTestVisible="False" IsReadOnly="True" Foreground="White" Text="Vue de dessus" FontFamily="/Style/Font/#Poppins"/>
+        </Viewbox>
+
+        <!--DataGrid-->
+        <Viewbox Grid.Column="0" Grid.Row="2" VerticalAlignment="Bottom">
+            <DataGrid x:Name="DataGrid" ItemsSource="{Binding Collection_DataGrid_0}" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="1" AutoGenerateColumns="False" SelectionMode="Single" SelectionUnit="Cell">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Distance" Binding="{Binding Propriete0}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 1" Binding="{Binding Propriete1}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 2" Binding="{Binding Propriete2}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 3" Binding="{Binding Propriete3}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 4" Binding="{Binding Propriete4}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 5" Binding="{Binding Propriete5}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 6" Binding="{Binding Propriete6}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 7" Binding="{Binding Propriete7}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 8" Binding="{Binding Propriete8}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 9" Binding="{Binding Propriete9}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Jalon 10" Binding="{Binding Propriete10}" CanUserReorder="False" CanUserSort="False" CanUserResize="False"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Viewbox>
+        
+        <!--Graphique Dessus-->
+        <lc:CartesianChart Grid.Column="1" Grid.Row="2" DataTooltip="{x:Null}">
+            <lc:CartesianChart.Series>
+                <lc:HeatSeries x:Name="MyHeatMap" Values="{Binding HeatValues}" DataLabels="True" Foreground="White">
+                    <lc:HeatSeries.GradientStopCollection>
+                        <!--<GradientStop Offset="0" Color="#191087"></GradientStop>
+                        <GradientStop Offset=".33" Color="#26507A"></GradientStop>
+                        <GradientStop Offset=".66" Color="#503A4D"></GradientStop>
+                        --><!--<GradientStop Offset=".75" Color="#6C2C2F"></GradientStop>--><!--
+                        <GradientStop Offset="1" Color="#7A2510"></GradientStop>-->
+                        <GradientStop Offset="0" Color="#404080"></GradientStop>
+                        <GradientStop Offset="0.2" Color="#0000FF"></GradientStop>
+                        <GradientStop Offset="0.4" Color="#00FFFF"></GradientStop>
+                        <GradientStop Offset="0.6" Color="#FFFF00"></GradientStop>
+                        <GradientStop Offset="0.8" Color="#FFA600"></GradientStop>
+                        <GradientStop Offset="1" Color="#FF0000"></GradientStop>
+                    </lc:HeatSeries.GradientStopCollection>
+                </lc:HeatSeries>
+            </lc:CartesianChart.Series>
+            <lc:CartesianChart.AxisX >
+                <lc:Axis Labels="{Binding Jalon}" LabelsRotation="-20" Foreground="White">
+                    <lc:Axis.Separator>
+                        <lc:Separator Step="1"></lc:Separator>
+                    </lc:Axis.Separator>
+                </lc:Axis>
+            </lc:CartesianChart.AxisX>
+            <lc:CartesianChart.AxisY>
+                <lc:Axis Labels="{Binding Distances}" Foreground="White"></lc:Axis>
+            </lc:CartesianChart.AxisY>
+        </lc:CartesianChart>
+    </Grid>
+</Page>
