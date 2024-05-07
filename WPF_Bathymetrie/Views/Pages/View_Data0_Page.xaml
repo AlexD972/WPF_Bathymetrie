@@ -133,9 +133,9 @@
                 </DataGrid>
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="5">
-                <DataGrid x:Name="DataGridMJ10" Margin="26 0 26 0" ItemsSource="{Binding ConsigneMaree0_10}" CellEditEnding="DataGrid_CellEditEnding" GridLinesVisibility="All" BorderThickness="1" CanUserAddRows="False" AutoGenerateColumns="False">
+                <DataGrid x:Name="DataGridMJ10" ItemsSource="{Binding ConsigneMaree0_10}" CellEditEnding="DataGrid_CellEditEnding" GridLinesVisibility="All" BorderThickness="1" CanUserAddRows="False" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Marée Jalon 10 :" Binding="{Binding Propriete1}" CanUserReorder="False" CanUserSort="False" CanUserResize="False" IsReadOnly="False"/>
+                        <DataGridTextColumn Header="Marée Jalon10:" Binding="{Binding Propriete1}" CanUserReorder="False" CanUserSort="False" CanUserResize="False" IsReadOnly="False"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Viewbox>
