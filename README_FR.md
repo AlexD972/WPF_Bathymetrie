@@ -1,18 +1,25 @@
-<h1 align="center"> WPF_Bathymétrie / WPF_Bathymetry</h1>
+<h1 align="center">WPF_Bathymétrie 🌊</h1>
+
+<p align="center">
+  <img src="https://github.com/AlexD972/WPF_Bathymetrie/assets/125886242/22637c54-0627-4b10-9c1b-ec6c2d503c11" width="500" style="border-radius:50%">
+</p>
 
 
-<h2>À propos :</h2>
-<h3>WPF_Bathymétrie est un logiciel permettant la visualisation de données bathymétriques d'une plage.</h3>
 
+## À propos 📖
+**WPF_Bathymétrie** est un logiciel qui permet la visualisation de données bathymétriques d'une plage. Il offre une interface intuitive pour explorer et comprendre les variations de profondeur de l'eau.
 
-<h2>Langage de programmation :</h2>
-<h3>Ce projet est réalisé avec le langage C# avec le framework .NET Core 8 WPF en utilisant le design pattern MVVM.</h3>
+## Langage de programmation 💻
+Ce projet est réalisé avec le langage **C#** en utilisant le framework **.NET Core 8 WPF**. J'ai adopté le design pattern **MVVM** pour assurer une structure de code propre et maintenable.
 
+## Comment utiliser le logiciel 🛠️
+Pour utiliser WPF_Bathymétrie, suivez ces étapes :
 
-<h2>Comment utiliser le logiciel :</h2>
-<h3>Pour l'utiliser, l'utilisateur doit entrer des données dans l'onglet "Données à l'instant T", qui représente la bathymétrie au moment où les profondeurs d'eau sont relevées.</h3>
-<h3>Ensuite il faut renseigner la marée présente au moment de ces relevés dans l'onglet "Données aux 0 des cartes".</h3>
-<h3>Dès que ces étapes sont réalisées, on peut faire :</h3>
-<h4>-Une prévision de la bathymétrie d'une plage en connaissant la marée future dans l'onglet "Prévision marée".</h4>
-<h4>-Une visualisation du profil d'un jalon de la plage dans l'onglet "Profil des jalons".</h4>
-<h4>-Une visualisation de la plage en vue du dessus dans l'onglet "Vue du dessus".</h4>
+1. Entrez des données dans l'onglet "**Données à l'instant T**". Ces données représentent la bathymétrie au moment où les profondeurs d'eau sont relevées.
+2. Renseignez la marée présente au moment de ces relevés dans l'onglet "**Données aux 0 des cartes**".
+
+Une fois ces étapes réalisées, vous pouvez :
+
+- Faire une prévision de la bathymétrie d'une plage en connaissant la marée future dans l'onglet "**Prévision marée**".
+- Visualiser le profil d'un jalon de la plage dans l'onglet "**Profil des jalons**".
+- Visualiser la plage en vue du dessus dans l'onglet "**Vue du dessus**".
