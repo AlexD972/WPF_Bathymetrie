@@ -1,5 +1,9 @@
 <h1 align="center">WPF_Bathymétrie / WPF_Bathymetry 🌊</h1>
 
+<p align="center">
+  <img src="https://github.com/AlexD972/WPF_Bathymetrie/assets/125886242/22637c54-0627-4b10-9c1b-ec6c2d503c11" width="250" style="border-radius:50%">
+</p>
+
 Bienvenue dans le projet WPF_Bathymétrie. Veuillez choisir votre langue :
 Welcome to the WPF_Bathymetry project. Please choose your language:
 
