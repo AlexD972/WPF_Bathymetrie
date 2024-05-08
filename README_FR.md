@@ -4,8 +4,6 @@
   <img src="https://github.com/AlexD972/WPF_Bathymetrie/assets/125886242/22637c54-0627-4b10-9c1b-ec6c2d503c11" width="500" style="border-radius:50%">
 </p>
 
-
-
 ## À propos 📖
 **WPF_Bathymétrie** est un logiciel qui permet la visualisation de données bathymétriques d'une plage. Il offre une interface intuitive pour explorer et comprendre les variations de profondeur de l'eau.
 
