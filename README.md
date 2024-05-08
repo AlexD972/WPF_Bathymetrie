@@ -3,8 +3,8 @@
 Bienvenue dans le projet WPF_Bathymétrie. Veuillez choisir votre langue :
 Welcome to the WPF_Bathymetry project. Please choose your language:
 
-- <a href="[README_FR.md]">Français</a>
-- <a href="[README_EN_US.md]">English</a>
+- <a href="README_FR.md">Français</a>
+- <a href="README_EN_US.md">English</a>
 
 # À propos / About 📖
 **WPF_Bathymétrie** est un logiciel qui permet la visualisation de données bathymétriques d'une plage.
